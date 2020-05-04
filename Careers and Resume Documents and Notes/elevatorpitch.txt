@@ -1,0 +1,28 @@
+My name is Geoffrey Gordon Ashbrook. 
+I am a Datascientist, using with mostly: 
+- Python,
+- R, and 
+- SQL 
+doing: 
+- machine learning, 
+- neural networks, 
+- natural language processing, 
+- statistical data analysis, etc. 
+
+My background is: 
+- a BA in Biology and a teaching cert (from CU Boulder)
+- 10 years experience working in science and language education 
+in the US and overseas. 
+- Now I am studying Data Science at Lambdaschool.
+
+I am very enthusiastic about diverse and multicultural teams and projects. 
+I am especially focused on ethics and best practice in project management, life long learning. 
+
+I love how data-science is so interdisciplinary 
+and connects different areas (I love studying lots of
+different subjects).
+What I want to use Data Science for:  
+A. helping society
+B. AI language comprehension
+C. machine ethics
+
