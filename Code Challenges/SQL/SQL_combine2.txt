@@ -1,0 +1,16 @@
+# (user)Problem
+# we have 2 tables, but we need:
+# a joined/mix of FirstName, LastName, City, State
+# even if data from the later table is abscent
+#
+# Solution(product)
+# start with Person table,
+# do a 'left' join
+# so it includes all items from person, even if address not there
+#
+
+# Write your MySQL query statement below
+SELECT p.FirstName, p.LastName, a.city, a.state
+FROM Person as p
+LEFT JOIN Address as a
+on p.PersonId = a.PersonId;
