@@ -1,4 +1,3 @@
-
 # 2020.04.27 ?
 
 # https://www.hackerrank.com/challenges/counting-valleys/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
@@ -11,8 +10,8 @@
 # we can ignore n
 # the path is string form
 # path is up or down
-# 
-# solution(product): 
+#
+# solution(product):
 # co
 # iterate through the path
 # track the elevation_units
@@ -25,7 +24,7 @@ import random
 import re
 import sys
 
-s = 'UDDDUDUU' # the path(steps?)
+s = "UDDDUDUU"  # the path(steps?)
 
 # Complete the countingValleys function below.
 def countingValleys(n, s):
@@ -43,7 +42,7 @@ def countingValleys(n, s):
     # iterate through path
     for step in s:
         # update elevation tracker: if "Up", increment
-        if step == 'U':
+        if step == "U":
             current_elevation += 1
         else:  # if down "D", decriment
             current_elevation -= 1
@@ -54,7 +53,8 @@ def countingValleys(n, s):
 
         # update last_elevation tracker
         last_elevation = current_elevation
-    
+
     return valley_counter
-      
+
+
 countingValleys(0, s)

@@ -1,0 +1,14 @@
+# (user)Problem: you have a table of emails
+# but you need to know the duplicate emails
+
+# Solution(product)
+# table: Person
+# column: Email
+# return: Having a count of more than 1 instance
+
+
+# Write your MySQL query statement below
+SELECT p.Email
+FROM Person as p
+GROUP BY p.Email
+HAVING COUNT(*) > 1

@@ -5,7 +5,7 @@
 # assigned instructions:
 # Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 # You may assume that each input would have exactly one solution, and you may not use the same element twice.
-# 
+#
 # Example:
 # Given nums = [2, 7, 11, 15], target = 9,
 # Because nums[0] + nums[1] = 2 + 7 = 9,
@@ -19,17 +19,17 @@
 # sum to the target (a + b = target)
 # without using the same index twice (same value is ok)
 
-# Solution(product): 
+# Solution(product):
 # the tricky part is to compare indices not values (to not self-compare)
-# but the good news is you only need to find one match 
+# but the good news is you only need to find one match
 # (where: (target - number_in_list) is also in list)
 # for each item in list, look for that: target-number in list?
 # exit after first success
-# return indices of those two numbers 
+# return indices of those two numbers
 # alternative solution my be a table storing the target-value values or indices
 
-class Solution:
 
+class Solution:
     def twoSum(self, nums, target):
 
         answer_list = [None, None]
@@ -53,8 +53,9 @@ class Solution:
 
         return answer_list
 
+
 # testing
 ss = Solution()
-print(ss.twoSum([2, 7, 11, 15],9))
-print(ss.twoSum([3,2,4],6))
-print(ss.twoSum([3,3], 6))
+print(ss.twoSum([2, 7, 11, 15], 9))
+print(ss.twoSum([3, 2, 4], 6))
+print(ss.twoSum([3, 3], 6))

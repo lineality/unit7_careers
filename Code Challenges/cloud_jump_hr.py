@@ -13,7 +13,7 @@ import random
 import re
 import sys
 
-# (user)problem: 
+# (user)problem:
 # The user has a list of 0's and 1's they have to navigate a path through.
 # but the user does not know (the user needs to know):
 # the number of steps in the shortest path (not the path itself) through list.
@@ -21,15 +21,14 @@ import sys
 # the user can jump over one-next-item (advance 2), or not jump (advance 1),
 # the user can only travel on zeros, not 1's (must jump over 1)
 #
-# solution(product): 
-# ~traverse through the list of numbers, using 
+# solution(product):
+# ~traverse through the list of numbers, using
 # a progress_marker and
 # as the index in the list: list[marker]
 # Only 2 conditions (plus exit):
 # If the next-next number is a zero, jump. else, move ahead one. (until end)
 # record how many clouds you touch, finally:
 # return that 'how many clouds touched' number
-
 
 
 def jumpingOnClouds(c):
@@ -47,7 +46,7 @@ def jumpingOnClouds(c):
     while this_cloud < len(c):
 
         # option 1:2, look ahead 2, go ahead 2
-        if this_cloud < (len(c) - 2) and c[this_cloud+2] == 0:
+        if this_cloud < (len(c) - 2) and c[this_cloud + 2] == 0:
             this_cloud += 2
 
         # option 2:2, go ahead 1
@@ -57,14 +56,13 @@ def jumpingOnClouds(c):
         else:  # exit: if this is the last cloud
             break
 
-        cloud_touch_counter += 1  
+        cloud_touch_counter += 1
 
     return cloud_touch_counter
 
 
-
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     n = int(input())
 
@@ -72,6 +70,6 @@ if __name__ == '__main__':
 
     result = jumpingOnClouds(c)
 
-    fptr.write(str(result) + '\n')
+    fptr.write(str(result) + "\n")
 
     fptr.close()

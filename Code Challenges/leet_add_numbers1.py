@@ -8,8 +8,9 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
-    #def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+    # def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
 
         # Part 1: turn the linked lists into listspart
@@ -40,8 +41,6 @@ class Solution:
                     break
         print(list2)
 
-
-
         # part 2: reverse the numbers
 
         l1 = list1
@@ -50,26 +49,25 @@ class Solution:
         # convert list 1
         l1 = l1[::-1]  # reverse the order
         strL = ""
-        l1 = int(''.join(map(str, l1)))  # convert to a single number
+        l1 = int("".join(map(str, l1)))  # convert to a single number
 
         print(l1)
 
         # convert list 2
         l2 = l2[::-1]  # reverse the order
         strL = ""
-        l2 = int(''.join(map(str, l2)))  # convert to a single number
+        l2 = int("".join(map(str, l2)))  # convert to a single number
 
         print(l2)
 
         # add and make a new backwards list
         # add list 1 and list 2
         l3 = l1 + l2  # add the numbers
-        l3 = list(str(l3))   # convert to list of digits (string form)
-        l3 = list(map(int, l3))   # convert to a list of digits
-        l3 = l3[::-1]   # reverse the order
-        
-        print(l3)
+        l3 = list(str(l3))  # convert to list of digits (string form)
+        l3 = list(map(int, l3))  # convert to a list of digits
+        l3 = l3[::-1]  # reverse the order
 
+        print(l3)
 
         # turn back into a linked list
 
@@ -79,13 +77,13 @@ class Solution:
         # start the linked list
         l3 = ListNode(list3[0])
 
-        #remove first item
+        # remove first item
         list3.pop(0)
 
         mask = l3
         for i in list3:  # now one digit shorter
             mask.next = ListNode(i)  # create node for each item in list
-            # print(mask.next.val) 
+            # print(mask.next.val)
             mask = mask.next
 
         print(l3.val)

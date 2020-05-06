@@ -17,15 +17,15 @@
 # the indices of which two different number entries (maybe same value)
 # sum to the target (a + b = target)
 
-# Solution(product): 
+# Solution(product):
 # the tricky part is to compare indices not values (to not self-compare)
-# but the good news is you only need to find one match 
+# but the good news is you only need to find one match
 # (where number-target is in list)
 # return indices
 # alternative solution my be a table storing the target-value values or indices
 
-class Solution:
 
+class Solution:
     def twoSum(self, nums, target):
 
         # answer goes here
@@ -47,12 +47,13 @@ class Solution:
             #   if matches target               and          not compared to self
             if (target - nums[i]) in nums and values_dict[target - index_dict[i]] != i:
                 # record answer indices in answer set
-                    answer_set.add(i)
-                    answer_set.add(values_dict[target - nums[i]])
+                answer_set.add(i)
+                answer_set.add(values_dict[target - nums[i]])
 
-        list_of_answer_indices = list(answer_set) # save only one set
+        list_of_answer_indices = list(answer_set)  # save only one set
 
         return list_of_answer_indices
+
 
 # [3,3]
 # ss = Solution()
