@@ -1,0 +1,7 @@
+black
+pylint
+pytest
+flake8
+pyqt5
+numpy
+matplotlib
